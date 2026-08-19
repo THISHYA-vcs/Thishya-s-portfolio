@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en"><!-- used is english-->
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="eye.png">
+  <title>Thishya V — Portfolio</title>
+
+  <!-- Google Font: Poppins -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.0/css/all.min.css">
+</head>
+<body>
+
+  <!--NAVIGATION-->
+  <header class="site-header">
+    <nav class="navbar">
+      <a href="#top" class="logo">THISHYA<span>.</span></a>
+
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#about">About</a></li><!--for navigation that is to follow up the link-->
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+
+      <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </nav>
+  </header>
+
+  <!--HERO / TOP-->
+  <section class="hero" id="top">
+    <div class="hero-inner">
+      <img src="profile.png" alt="Photo of Thishya V" class="hero-photo">
+      <h1 class="hero-name">Thishya V</h1>
+      <p class="hero-title"><i>BCA Student . UI/UX Designer . Visual Content Creator</i></p>
+      <a href="#contact" class="btn btn-primary">Get In Touch</a>
+    </div>
+  </section>
+
+  <main>
+
+    <!--ABOUT-->
+    <section class="section" id="about">
+      <h2 class="section-title">About Me</h2>
+      <p class="section-text">
+        I'm a <b>BCA-III</b> student at <b>Achariya Arts and Science College</b>, Puducherry (2023&ndash;2027),
+        with a strong interest in UI/UX design, branding, and AI-driven creative workflows.
+        I completed a <b>UI/UX Design</b> training program at <strong> Codec Technologies</strong> Pvt. Ltd.,and currently pursuing <strong>MERN Stack</strong> with &copy;<strong>Code Builders</strong>.I'm based in Cuddalore, Tamil Nadu, and speak English, Tamil, and Telugu.
+        Outside of design and academics, I enjoy chess and cooking.
+      </p>
+    </section>
+
+    <!--EXPERIENCE-->
+    <section class="section section-alt" id="experience">
+      <h2 class="section-title">Experience</h2>
+      <ul class="timeline">
+        <li class="timeline-item">
+          <h3>UI/UX Design Training</h3>
+          <p>Codec Technologies Pvt. Ltd. Recorded video program</p>
+        </li>     
+        <li class="timeline-item">
+          <h3>Visual Content Creator</h3>
+          <p>@democraticnaari . Canva-based social content</p>
+        </li>
+      </ul>
+    </section>
+
+    <!--SKILLS-->
+    <section class="section" id="skills">
+      <h2 class="section-title">Skills</h2>
+      <ul class="skill-list">
+        <li>UI/UX Design(Foundation)</li>
+        <li>Figma(Foundation)</li>
+        <li>Canva(Proficient)</li>
+        <li>HTML & CSS</li>
+        <li>Prompt Engineering</li>
+        <li>Caffeine Web AI</li>
+      </ul>
+    </section>
+    <section class="section" id="Language Known">
+      <h2 class="section-title">Language Known</h2>
+      <ul class="Language_Known-list">
+        <li>Tamil(Native)</li>
+        <li>Telugu(speaking)</li>
+        <li>English(Proficient)</li>
+      </ul>
+    </section>
+
+    <!--CONTACT-->
+    <section class="section section-alt" id="contact">
+      <h2 class="section-title">Contact</h2>
+
+      <div class="contact-info">
+        <p><i class="fa-solid fa-location-dot"></i><a href="https://maps.google.com/?q=Cuddalore,+Tamil+Nadu" target="_blank" rel="noopener noreferrer">Cuddalore, Tamil Nadu</a></p>
+        <p><i class="fa-solid fa-envelope"></i><a href="mailto:thishya.dv@gmail.com?subject=Portfolio%20Inquiry&body=Hi%20Thishya" target="_blank" rel="noopener noreferrer"> Email me!</a> 
+        </p> 
+        <p><i class="fa-solid fa-phone"></i><a href="tel:+91 6379593681" target="_blank" rel="noopener noreferrer">Any queries</a></p>
+        <p>
+          <i class="fa-brands fa-linkedin"></i><a href="https://linkedin.com/in/thishya-v2301712a6" target="_blank" rel="noopener noreferrer">linkedin.com/in/thishya-v2301712a6</a>
+        </p>
+      </div>
+
+      <form id="contactForm" class="contact-form" , action="https://formspree.io/f/xeeyrygd"method="POST">
+
+
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" placeholder="Enter your name" required>
+
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" placeholder="your name @example.com" required>
+
+        <label for="contact">Contact Number</label>
+        <input type="tel" id="contact" name="contact" placeholder="Phone number" required>
+
+        <button type="submit" class="btn btn-primary btn-full">Send Message</button>
+
+        <p id="formStatus" class="form-status"></p>
+      </form>
+    </section>
+
+  </main>
+
+  <!--FOOTER-->
+  <footer class="site-footer">
+    <p> Thank you for visiting my portfolio!</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
