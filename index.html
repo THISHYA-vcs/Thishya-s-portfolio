@@ -134,34 +134,69 @@
   </footer>
 
   <script src="script.js"></script>
-  <div id="custom-cursor"></div>
-  <script>
-  const cursor = document.getElementById("custom-cursor");
-
-  let mouseX = 0;
-  let mouseY = 0;
-  let cursorX = 0;
-  let cursorY = 0;
-  let wave = 0;
-
-  document.addEventListener("mousemove", (e) => {
-    mouseX = e.clientX;
-    mouseY = e.clientY;
-  });
-
-  function animateCursor() {
-    cursorX += (mouseX - cursorX) * 0.14;
-    cursorY += (mouseY - cursorY) * 0.14;
-
-    wave += 0.16;
-
-    cursor.style.left = `${cursorX + Math.sin(wave) * 3}px`;
-    cursor.style.top = `${cursorY + Math.cos(wave) * 3}px`;
-
-    requestAnimationFrame(animateCursor);
+  <style>
+  html, body, body * {
+    cursor: none !important;
   }
 
-  animateCursor();
+  #cursor-dot,
+  #cursor-ring {
+    position: fixed;
+    pointer-events: none;
+    border-radius: 50%;
+    z-index: 999999;
+    transform: translate(-50%, -50%);
+  }
+
+  #cursor-dot {
+    width: 8px;
+    height: 8px;
+    background: #000;
+  }
+
+  #cursor-ring {
+    width: 40px;
+    height: 40px;
+    border: 1px solid rgba(0, 0, 0, 0.55);
+  }
+</style>
+
+<script>
+  document.getElementById("custom-cursor")?.remove();
+
+  const dot = document.createElement("div");
+  dot.id = "cursor-dot";
+
+  const ring = document.createElement("div");
+  ring.id = "cursor-ring";
+
+  document.body.append(dot, ring);
+
+  let mouseX = innerWidth / 2;
+  let mouseY = innerHeight / 2;
+  let ringX = mouseX;
+  let ringY = mouseY;
+
+  addEventListener("mousemove", (event) => {
+    mouseX = event.clientX;
+    mouseY = event.clientY;
+
+    dot.style.left = mouseX + "px";
+    dot.style.top = mouseY + "px";
+  });
+
+  function animateRing() {
+    ringX += (mouseX - ringX) * 0.14;
+    ringY += (mouseY - ringY) * 0.14;
+
+    ring.style.left = ringX + "px";
+    ring.style.top = ringY + "px";
+
+    requestAnimationFrame(animateRing);
+  }
+
+  animateRing();
 </script>
+
 </body>
 </html>
