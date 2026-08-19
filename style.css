@@ -413,6 +413,30 @@ a:hover{
 html, body, body * {
   cursor: none !important;
 }
+   .nav-links.open {
+    max-height: 300px;
+  }
+
+  .nav-links li {
+    width: 100%;
+    text-align: center;
+  }
+
+  .nav-links a {
+    display: block;
+    padding: 16px;
+  }
+
+  .menu-toggle {
+    display: flex;
+  }
+
+  .hero-name {
+    font-size: 32px;
+  }
+   html, body, body * {
+  cursor: none !important;
+}
 
 #custom-cursor {
   position: fixed;
@@ -436,25 +460,4 @@ html, body, body * {
   left: 50%;
   transform: translate(-50%, -50%);
 }
-  .nav-links.open {
-    max-height: 300px;
-  }
-
-  .nav-links li {
-    width: 100%;
-    text-align: center;
-  }
-
-  .nav-links a {
-    display: block;
-    padding: 16px;
-  }
-
-  .menu-toggle {
-    display: flex;
-  }
-
-  .hero-name {
-    font-size: 32px;
-  }
 }
